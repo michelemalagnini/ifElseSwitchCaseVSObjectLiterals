@@ -53,8 +53,8 @@ console.log(getTranslationOBJECTLITERALS("hampstead heath"));
 // how to convert a string to boolean
 function stringToBool(str) {
   const boolStrings = {
-    "true": true,
-    "false": false,
+    true: true,
+    false: false,
   };
 
   return boolStrings[str] ?? "String is not a boolean value";
@@ -62,12 +62,12 @@ function stringToBool(str) {
 
 // example with more complex logic
 
-function calculate(num1, num2, action){
+function calculate(num1, num2, action) {
   const actions = {
-    add: (a , b) => return a + b,
-    subsctract: (a , b) => return a - b,
-    multiply: (a , b) => return a * b,
-    divide: (a , b) => return a / b,
-  }
-return actions[action]?.(num1,num2) ?? "Calculate not recognized";
+    add: (a, b) => a + b,
+    subsctract: (a, b) => a - b,
+    multiply: (a, b) => a * b,
+    divide: (a, b) => a / b,
+  };
+  return actions[action]?.(num1, num2) ?? "Calculate not recognized";
 }
