@@ -59,3 +59,15 @@ function stringToBool(str) {
 
   return boolStrings[str] ?? "String is not a boolean value";
 }
+
+// example with more complex logic
+
+function calculate(num1, num2, action){
+  const actions = {
+    add: (a , b) => return a + b,
+    subsctract: (a , b) => return a - b,
+    multiply: (a , b) => return a * b,
+    divide: (a , b) => return a / b,
+  }
+return actions[action]?.(num1,num2) ?? "Calculate not recognized";
+}
