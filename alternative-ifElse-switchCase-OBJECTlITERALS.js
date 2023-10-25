@@ -49,3 +49,13 @@ function getTranslationOBJECTLITERALS(rhyme) {
 }
 
 console.log(getTranslationOBJECTLITERALS("hampstead heath"));
+
+// how to convert a string to boolean
+function stringToBool(str) {
+  const boolStrings = {
+    "true": true,
+    "false": false,
+  };
+
+  return boolStrings[str] ?? "String is not a boolean value";
+}
